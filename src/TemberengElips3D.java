@@ -3,6 +3,7 @@ public class TemberengElips3D extends BolaElips implements Runnable {
     public double sudutDerajat, tinggiTembereng, luasAlasTembereng, kelilingAlasTembereng, volumeTemberengElips3D, luasPermukaanTemberengElips3D;
     public double theta, panjangBusur, taliBusur, kelilingElips, integrandBusur, jumlahSegmen, h, total;
 
+    // constructor
     public TemberengElips3D(double semiMayorLuar, double semiMinorLuar, double tinggiTembereng, double sudutDerajat, boolean isManual) {
         super(semiMayorLuar, semiMinorLuar, tinggiTembereng, isManual);
         if (tinggiTembereng <= 0) {
@@ -22,6 +23,7 @@ public class TemberengElips3D extends BolaElips implements Runnable {
         this.sudutDerajat = sudutDerajat;
     }
 
+    // overriding
     public double hitungVolumeTemberengElips3D() {
         this.theta = Math.toRadians(this.sudutDerajat);
         this.luasAlasTembereng = 0.5 * super.semiMayorLuar * super.semiMinorLuar * (theta - Math.sin(theta));
@@ -29,6 +31,7 @@ public class TemberengElips3D extends BolaElips implements Runnable {
         return this.volumeTemberengElips3D;
     }
 
+    // overloading
     public double hitungVolumeTemberengElips3D(double semiMayorLuar, double semiMinorLuar, double tinggiTembereng, double sudutDerajat) {
         if (tinggiTembereng <= 0) {
             throw new IllegalArgumentException("Tinggi tembereng elips 3D harus lebih besar dari 0!");
@@ -48,6 +51,7 @@ public class TemberengElips3D extends BolaElips implements Runnable {
         return this.volumeTemberengElips3D;
     }
 
+    // same as above
     public double hitungLuasPermukaanTemberengElips3D() {
         this.theta = Math.toRadians(this.sudutDerajat);
         this.panjangBusur = hitungPanjangBusurElips(super.semiMayorLuar, super.semiMinorLuar, this.sudutDerajat);
@@ -58,6 +62,7 @@ public class TemberengElips3D extends BolaElips implements Runnable {
         return this.luasPermukaanTemberengElips3D;
     }
 
+    // same as above
     public double hitungLuasPermukaanTemberengElips3D(double semiMayorLuar, double semiMinorLuar, double tinggiTembereng, double sudutDerajat) {
         if (semiMayorLuar <= 0 || semiMinorLuar <= 0) {
             throw new IllegalArgumentException("Panjang sumbu semi mayor dan semi minor harus lebih besar dari 0!");

@@ -1,0 +1,1278 @@
+<mxfile host="app.diagrams.net" agent="Codex" version="26.0.0" type="device" modified="2026-06-21T22:31:00+07:00">
+  <diagram id="BendaGeometri" name="BendaGeometri">
+    <mxGraphModel dx="1700" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="950" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bg-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Flowchart Interface BendaGeometri" vertex="1">
+          <mxGeometry x="40" y="25" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666" value="Kontrak dasar untuk semua bangun geometri yang menghitung luas dan keliling. Implementasi nyata ada pada Elips dan turunannya." vertex="1">
+          <mxGeometry x="40" y="75" width="620" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Start" vertex="1">
+          <mxGeometry x="80" y="190" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-contract" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Deklarasikan interface BendaGeometri" vertex="1">
+          <mxGeometry x="40" y="280" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-methods" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Method wajib:&#xa;hitungLuas()&#xa;hitungKeliling()&#xa;hitungLuas(a,b)&#xa;hitungKeliling(a,b)" vertex="1">
+          <mxGeometry x="40" y="390" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-impl" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Class mengimplementasikan interface?" vertex="1">
+          <mxGeometry x="70" y="575" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-elips" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Elips menyediakan implementasi awal" vertex="1">
+          <mxGeometry x="410" y="520" width="300" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-child" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Class turunan dapat override atau memakai method Elips" vertex="1">
+          <mxGeometry x="410" y="630" width="330" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="End" vertex="1">
+          <mxGeometry x="500" y="760" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-e1" edge="1" parent="1" source="bg-start" target="bg-contract" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-e2" edge="1" parent="1" source="bg-contract" target="bg-methods" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-e3" edge="1" parent="1" source="bg-methods" target="bg-impl" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-e4" edge="1" parent="1" source="bg-impl" target="bg-elips" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-e5" edge="1" parent="1" source="bg-elips" target="bg-child" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bg-e6" edge="1" parent="1" source="bg-child" target="bg-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="elips" name="Elips">
+    <mxGraphModel dx="1700" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="elips-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Flowchart Class Elips" vertex="1">
+          <mxGeometry x="40" y="25" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666" value="Implements BendaGeometri dan Runnable. Menjadi class dasar untuk bangun elips 2D dan beberapa bangun 3D." vertex="1">
+          <mxGeometry x="40" y="75" width="540" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Start" vertex="1">
+          <mxGeometry x="80" y="170" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-ctor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Constructor Elips(semiMayorLuar, semiMinorLuar, isManual)" vertex="1">
+          <mxGeometry x="40" y="250" width="280" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-valid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Input valid?&#xa;semiMayorLuar &gt; 0&#xa;semiMinorLuar &gt; 0&#xa;semiMayorLuar &gt;= semiMinorLuar" vertex="1">
+          <mxGeometry x="85" y="365" width="190" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8" value="Throw IllegalArgumentException&#xa;proses dihentikan" vertex="1">
+          <mxGeometry x="340" y="385" width="245" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-state" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Simpan semiMayorLuar, semiMinorLuar, isManual&#xa;PI = 3.14" vertex="1">
+          <mxGeometry x="40" y="525" width="280" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-run" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="run() class ini dipanggil" vertex="1">
+          <mxGeometry x="40" y="650" width="280" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-manual" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="isManual?" vertex="1">
+          <mxGeometry x="90" y="750" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-call-manual" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuas(semiMayorLuar, semiMinorLuar)&#xa;hitungKeliling(semiMayorLuar, semiMinorLuar)" vertex="1">
+          <mxGeometry x="350" y="730" width="270" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-call-auto" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuas()&#xa;hitungKeliling()" vertex="1">
+          <mxGeometry x="40" y="900" width="280" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="End" vertex="1">
+          <mxGeometry x="420" y="910" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-e1" edge="1" parent="1" source="elips-start" target="elips-ctor" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-e2" edge="1" parent="1" source="elips-ctor" target="elips-valid" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-e3" edge="1" parent="1" source="elips-valid" target="elips-error" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-e4" edge="1" parent="1" source="elips-valid" target="elips-state" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-e5" edge="1" parent="1" source="elips-state" target="elips-run" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-e6" edge="1" parent="1" source="elips-run" target="elips-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-e7" edge="1" parent="1" source="elips-manual" target="elips-call-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-e8" edge="1" parent="1" source="elips-manual" target="elips-call-auto" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-e9" edge="1" parent="1" source="elips-call-manual" target="elips-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-e10" edge="1" parent="1" source="elips-call-auto" target="elips-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-method-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1" value="Metode, formula, dan sub-alur penting" vertex="1">
+          <mxGeometry x="630" y="120" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-method-0" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuas()&#xa;------------------------------&#xa;luas = PI * semiMayorLuar * semiMinorLuar&#xa;return luas" vertex="1">
+          <mxGeometry x="630" y="165" width="390" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-method-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuas(a,b)&#xa;------------------------------&#xa;validasi a dan b&#xa;luas = PI * a * b&#xa;return luas" vertex="1">
+          <mxGeometry x="1070" y="165" width="390" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-method-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungKeliling()&#xa;------------------------------&#xa;keliling = PI * (3(a+b) - sqrt((3a+b)(a+3b)))&#xa;a=semiMayorLuar, b=semiMinorLuar&#xa;return keliling" vertex="1">
+          <mxGeometry x="630" y="291" width="390" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="elips-method-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungKeliling(a,b)&#xa;------------------------------&#xa;validasi a dan b&#xa;pakai pendekatan Ramanujan&#xa;return keliling" vertex="1">
+          <mxGeometry x="1070" y="309" width="390" height="122" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="bola" name="BolaElips">
+    <mxGraphModel dx="1700" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bola-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Flowchart Class BolaElips" vertex="1">
+          <mxGeometry x="40" y="25" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666" value="Extends Elips dan Runnable. Menghitung volume dan luas permukaan ellipsoid." vertex="1">
+          <mxGeometry x="40" y="75" width="540" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Start" vertex="1">
+          <mxGeometry x="80" y="170" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-ctor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Constructor BolaElips(semiMayorLuar, semiMinorLuar, sumbuC, isManual)&#xa;Panggil super(...)" vertex="1">
+          <mxGeometry x="40" y="250" width="280" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-valid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Input valid?&#xa;semiMayorLuar &gt; 0&#xa;semiMinorLuar &gt; 0&#xa;semiMayorLuar &gt;= semiMinorLuar&#xa;sumbuC &gt; 0" vertex="1">
+          <mxGeometry x="85" y="365" width="190" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8" value="Throw IllegalArgumentException&#xa;proses dihentikan" vertex="1">
+          <mxGeometry x="340" y="385" width="245" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-state" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Simpan sumbuC&#xa;p = 1.6075" vertex="1">
+          <mxGeometry x="40" y="525" width="280" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-super" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="super.run()&#xa;isi luas dan keliling dasar Elips" vertex="1">
+          <mxGeometry x="40" y="645" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-run" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="run() class ini dipanggil" vertex="1">
+          <mxGeometry x="40" y="750" width="280" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-manual" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="isManual?" vertex="1">
+          <mxGeometry x="90" y="850" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-call-manual" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasPermukaanBolaElips(a,b,c)&#xa;hitungVolumeBolaElips(a,b,c)" vertex="1">
+          <mxGeometry x="350" y="830" width="270" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-call-auto" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasPermukaanBolaElips()&#xa;hitungVolumeBolaElips()" vertex="1">
+          <mxGeometry x="40" y="1000" width="280" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="End" vertex="1">
+          <mxGeometry x="420" y="1010" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-e1" edge="1" parent="1" source="bola-start" target="bola-ctor" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-e2" edge="1" parent="1" source="bola-ctor" target="bola-valid" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-e3" edge="1" parent="1" source="bola-valid" target="bola-error" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-e4" edge="1" parent="1" source="bola-valid" target="bola-state" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-e5" edge="1" parent="1" source="bola-state" target="bola-super" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-e6" edge="1" parent="1" source="bola-super" target="bola-run" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-e7" edge="1" parent="1" source="bola-run" target="bola-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-e8" edge="1" parent="1" source="bola-manual" target="bola-call-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-e9" edge="1" parent="1" source="bola-manual" target="bola-call-auto" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-e10" edge="1" parent="1" source="bola-call-manual" target="bola-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-e11" edge="1" parent="1" source="bola-call-auto" target="bola-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-method-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1" value="Metode, formula, dan sub-alur penting" vertex="1">
+          <mxGeometry x="630" y="120" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-method-0" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungVolumeBolaElips()&#xa;------------------------------&#xa;pastikan super.luas &gt; 0&#xa;volume = (4/3) * super.luas * sumbuC&#xa;return volume" vertex="1">
+          <mxGeometry x="630" y="165" width="390" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-method-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungVolumeBolaElips(a,b,c)&#xa;------------------------------&#xa;validasi a, b, c&#xa;luasAlas = super.hitungLuas(a,b)&#xa;volume = (4/3) * luasAlas * c" vertex="1">
+          <mxGeometry x="1070" y="165" width="390" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-method-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasPermukaanBolaElips()&#xa;------------------------------&#xa;surface = 4*Math.PI*(( (ab)^p + (ac)^p + (bc)^p )/3)^(1/p)&#xa;pakai field dari object" vertex="1">
+          <mxGeometry x="630" y="309" width="390" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="bola-method-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasPermukaanBolaElips(a,b,c)&#xa;------------------------------&#xa;validasi a, b, c&#xa;pakai rumus Knud Thomsen&#xa;return luasPermukaanBolaElips" vertex="1">
+          <mxGeometry x="1070" y="309" width="390" height="122" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="cincin2d" name="CincinElips">
+    <mxGraphModel dx="1700" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cincin2d-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Flowchart Class CincinElips" vertex="1">
+          <mxGeometry x="40" y="25" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666" value="Extends Elips dan Runnable. Menghitung luas serta keliling cincin elips 2D dari elips luar dan elips dalam." vertex="1">
+          <mxGeometry x="40" y="75" width="540" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Start" vertex="1">
+          <mxGeometry x="80" y="170" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-ctor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Constructor CincinElips(aLuar, bLuar, aDalam, bDalam, isManual)&#xa;Panggil super(...)" vertex="1">
+          <mxGeometry x="40" y="250" width="280" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-valid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Input valid?&#xa;aDalam &gt; 0 dan bDalam &gt; 0&#xa;aDalam &lt; aLuar&#xa;bDalam &lt; bLuar&#xa;aDalam &gt;= bDalam" vertex="1">
+          <mxGeometry x="85" y="365" width="190" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8" value="Throw IllegalArgumentException&#xa;proses dihentikan" vertex="1">
+          <mxGeometry x="340" y="385" width="245" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-state" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Simpan semiMayorDalam dan semiMinorDalam" vertex="1">
+          <mxGeometry x="40" y="525" width="280" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-run" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="run() class ini dipanggil" vertex="1">
+          <mxGeometry x="40" y="650" width="280" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-manual" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="isManual?" vertex="1">
+          <mxGeometry x="90" y="750" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-call-manual" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasCincin(aLuar,bLuar,aDalam,bDalam)&#xa;hitungKelilingCincin(aLuar,bLuar,aDalam,bDalam)" vertex="1">
+          <mxGeometry x="350" y="730" width="270" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-call-auto" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuas()&#xa;hitungKeliling()&#xa;(overridden ke method cincin)" vertex="1">
+          <mxGeometry x="40" y="900" width="280" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="End" vertex="1">
+          <mxGeometry x="420" y="910" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-e1" edge="1" parent="1" source="cincin2d-start" target="cincin2d-ctor" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-e2" edge="1" parent="1" source="cincin2d-ctor" target="cincin2d-valid" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-e3" edge="1" parent="1" source="cincin2d-valid" target="cincin2d-error" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-e4" edge="1" parent="1" source="cincin2d-valid" target="cincin2d-state" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-e5" edge="1" parent="1" source="cincin2d-state" target="cincin2d-run" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-e6" edge="1" parent="1" source="cincin2d-run" target="cincin2d-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-e7" edge="1" parent="1" source="cincin2d-manual" target="cincin2d-call-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-e8" edge="1" parent="1" source="cincin2d-manual" target="cincin2d-call-auto" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-e9" edge="1" parent="1" source="cincin2d-call-manual" target="cincin2d-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-e10" edge="1" parent="1" source="cincin2d-call-auto" target="cincin2d-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-method-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1" value="Metode, formula, dan sub-alur penting" vertex="1">
+          <mxGeometry x="630" y="120" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-method-0" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuas()&#xa;------------------------------&#xa;return hitungLuasCincin()" vertex="1">
+          <mxGeometry x="630" y="165" width="390" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-method-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungKeliling()&#xa;------------------------------&#xa;return hitungKelilingCincin()" vertex="1">
+          <mxGeometry x="1070" y="165" width="390" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-method-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasCincin()&#xa;------------------------------&#xa;luasElips = super.hitungLuas(aLuar,bLuar)&#xa;luasDalam = super.hitungLuas(aDalam,bDalam)&#xa;luasCincin = luasElips - luasDalam" vertex="1">
+          <mxGeometry x="630" y="279" width="390" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-method-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungKelilingCincin()&#xa;------------------------------&#xa;kelilingElips = super.hitungKeliling(aLuar,bLuar)&#xa;kelilingDalam = super.hitungKeliling(aDalam,bDalam)&#xa;kelilingCincin = kelilingElips + kelilingDalam" vertex="1">
+          <mxGeometry x="1070" y="279" width="390" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin2d-method-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="Method berparameter&#xa;------------------------------&#xa;validasi ulang a/b luar dan dalam&#xa;set super.luas atau super.keliling ke nilai elips luar&#xa;return hasil cincin" vertex="1">
+          <mxGeometry x="630" y="423" width="390" height="122" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="cincin3d" name="CincinElips3D">
+    <mxGraphModel dx="1700" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cincin3d-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Flowchart Class CincinElips3D" vertex="1">
+          <mxGeometry x="40" y="25" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666" value="Extends BolaElips dan Runnable. Membentuk tabung elips berlubang dengan lubang lingkaran radiusDalam." vertex="1">
+          <mxGeometry x="40" y="75" width="540" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Start" vertex="1">
+          <mxGeometry x="80" y="170" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-ctor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Constructor CincinElips3D(a,b,sumbuC,radiusDalam,isManual)&#xa;Panggil super(...)" vertex="1">
+          <mxGeometry x="40" y="250" width="280" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-valid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Input valid?&#xa;a &gt; 0 dan b &gt; 0&#xa;a &gt;= b&#xa;sumbuC &gt; 0&#xa;radiusDalam &gt; 0&#xa;radiusDalam &lt; a dan radiusDalam &lt; b" vertex="1">
+          <mxGeometry x="85" y="365" width="190" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8" value="Throw IllegalArgumentException&#xa;proses dihentikan" vertex="1">
+          <mxGeometry x="340" y="385" width="245" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-state" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Simpan radiusDalam" vertex="1">
+          <mxGeometry x="40" y="525" width="280" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-super" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="super.run()&#xa;jalankan perhitungan BolaElips terlebih dahulu" vertex="1">
+          <mxGeometry x="40" y="645" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-run" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="run() class ini dipanggil" vertex="1">
+          <mxGeometry x="40" y="750" width="280" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-manual" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="isManual?" vertex="1">
+          <mxGeometry x="90" y="850" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-call-manual" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasPermukaanCincinElips3D(a,b,c,r)&#xa;hitungVolumeCincinElips3D(a,b,c,r)" vertex="1">
+          <mxGeometry x="350" y="830" width="270" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-call-auto" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasPermukaanCincinElips3D()&#xa;hitungVolumeCincinElips3D()" vertex="1">
+          <mxGeometry x="40" y="1000" width="280" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="End" vertex="1">
+          <mxGeometry x="420" y="1010" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-e1" edge="1" parent="1" source="cincin3d-start" target="cincin3d-ctor" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-e2" edge="1" parent="1" source="cincin3d-ctor" target="cincin3d-valid" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-e3" edge="1" parent="1" source="cincin3d-valid" target="cincin3d-error" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-e4" edge="1" parent="1" source="cincin3d-valid" target="cincin3d-state" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-e5" edge="1" parent="1" source="cincin3d-state" target="cincin3d-super" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-e6" edge="1" parent="1" source="cincin3d-super" target="cincin3d-run" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-e7" edge="1" parent="1" source="cincin3d-run" target="cincin3d-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-e8" edge="1" parent="1" source="cincin3d-manual" target="cincin3d-call-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-e9" edge="1" parent="1" source="cincin3d-manual" target="cincin3d-call-auto" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-e10" edge="1" parent="1" source="cincin3d-call-manual" target="cincin3d-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-e11" edge="1" parent="1" source="cincin3d-call-auto" target="cincin3d-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-method-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1" value="Metode, formula, dan sub-alur penting" vertex="1">
+          <mxGeometry x="630" y="120" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-method-0" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungVolumeCincinElips3D()&#xa;------------------------------&#xa;luasElips = super.hitungLuas(a,b)&#xa;luasLingkaranDalam = PI*r^2&#xa;volume = (luasElips - luasLingkaranDalam) * sumbuC" vertex="1">
+          <mxGeometry x="630" y="165" width="390" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-method-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungVolumeCincinElips3D(a,b,c,r)&#xa;------------------------------&#xa;validasi a, b, c, r&#xa;volumeLuar = luasElips * c&#xa;volumeDalam = luasLingkaranDalam * c&#xa;volumeCincin = volumeLuar - volumeDalam" vertex="1">
+          <mxGeometry x="1070" y="165" width="390" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-method-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasPermukaanCincinElips3D()&#xa;------------------------------&#xa;kelilingElips = super.hitungKeliling(a,b)&#xa;kelilingLingkaranDalam = 2*PI*r&#xa;luas = 2*(luasElips-luasLingkaranDalam) + kelilingElips*c + kelilingLingkaranDalam*c" vertex="1">
+          <mxGeometry x="630" y="309" width="390" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="cincin3d-method-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="Method berparameter&#xa;------------------------------&#xa;validasi ulang&#xa;pakai parameter a,b,c,r&#xa;return luasPermukaanCincinElips3D" vertex="1">
+          <mxGeometry x="1070" y="327" width="390" height="122" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="juring2d" name="JuringElips">
+    <mxGraphModel dx="1700" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="juring2d-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Flowchart Class JuringElips" vertex="1">
+          <mxGeometry x="40" y="25" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666" value="Extends Elips dan Runnable. Menghitung juring elips 2D, termasuk panjang busur numerik dengan Simpson 1/3." vertex="1">
+          <mxGeometry x="40" y="75" width="540" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Start" vertex="1">
+          <mxGeometry x="80" y="170" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-ctor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Constructor JuringElips(a,b,sudutDerajat,isManual)&#xa;Panggil super(...)" vertex="1">
+          <mxGeometry x="40" y="250" width="280" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-valid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Input valid?&#xa;a &gt; 0 dan b &gt; 0&#xa;a &gt;= b&#xa;0 &lt; sudutDerajat &lt;= 360" vertex="1">
+          <mxGeometry x="85" y="365" width="190" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8" value="Throw IllegalArgumentException&#xa;proses dihentikan" vertex="1">
+          <mxGeometry x="340" y="385" width="245" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-state" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Simpan sudutDerajat" vertex="1">
+          <mxGeometry x="40" y="525" width="280" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-run" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="run() class ini dipanggil" vertex="1">
+          <mxGeometry x="40" y="650" width="280" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-manual" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="isManual?" vertex="1">
+          <mxGeometry x="90" y="750" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-call-manual" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasJuring(a,b,sudut)&#xa;hitungKelilingJuring(a,b,sudut)" vertex="1">
+          <mxGeometry x="350" y="730" width="270" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-call-auto" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuas()&#xa;hitungKeliling()&#xa;(overridden ke method juring)" vertex="1">
+          <mxGeometry x="40" y="900" width="280" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="End" vertex="1">
+          <mxGeometry x="420" y="910" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-e1" edge="1" parent="1" source="juring2d-start" target="juring2d-ctor" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-e2" edge="1" parent="1" source="juring2d-ctor" target="juring2d-valid" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-e3" edge="1" parent="1" source="juring2d-valid" target="juring2d-error" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-e4" edge="1" parent="1" source="juring2d-valid" target="juring2d-state" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-e5" edge="1" parent="1" source="juring2d-state" target="juring2d-run" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-e6" edge="1" parent="1" source="juring2d-run" target="juring2d-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-e7" edge="1" parent="1" source="juring2d-manual" target="juring2d-call-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-e8" edge="1" parent="1" source="juring2d-manual" target="juring2d-call-auto" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-e9" edge="1" parent="1" source="juring2d-call-manual" target="juring2d-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-e10" edge="1" parent="1" source="juring2d-call-auto" target="juring2d-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-method-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1" value="Metode, formula, dan sub-alur penting" vertex="1">
+          <mxGeometry x="630" y="120" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-method-0" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuas()&#xa;------------------------------&#xa;return hitungLuasJuring()" vertex="1">
+          <mxGeometry x="630" y="165" width="390" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-method-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasJuring()&#xa;------------------------------&#xa;luasJuring = (sudutDerajat/360) * super.luas&#xa;return luasJuring" vertex="1">
+          <mxGeometry x="1070" y="165" width="390" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-method-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasJuring(a,b,sudut)&#xa;------------------------------&#xa;validasi a,b,sudut&#xa;luasElips = super.hitungLuas(a,b)&#xa;luasJuring = (sudut/360) * luasElips" vertex="1">
+          <mxGeometry x="630" y="279" width="390" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-method-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungKelilingJuring()&#xa;------------------------------&#xa;panjangBusur = hitungPanjangBusurElips(...)&#xa;jika sudut == 360: sisiAwal=0 dan sisiAkhir=0&#xa;selain itu: sisiAwal=a, sisiAkhir=jarak pusat ke titik&#xa;kelilingJuring = panjangBusur + sisiAwal + sisiAkhir" vertex="1">
+          <mxGeometry x="1070" y="291" width="390" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-method-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=8" value="hitungPanjangBusurElips(a,b,sudut)&#xa;------------------------------&#xa;theta = radians(sudut)&#xa;jumlahSegmen = 1000&#xa;h = theta / jumlahSegmen&#xa;total = f(0) + f(theta)&#xa;loop i=1 sampai 999&#xa;tambah bobot 4 untuk ganjil, 2 untuk genap&#xa;panjangBusur = (h/3) * total" vertex="1">
+          <mxGeometry x="630" y="423" width="390" height="194" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-method-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=8" value="integrandBusur(a,b,t)&#xa;------------------------------&#xa;sqrt((-a*sin(t))^2 + (b*cos(t))^2)" vertex="1">
+          <mxGeometry x="1070" y="453" width="390" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="juring2d-method-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=8" value="hitungJarakPusatKeTitikElips(a,b,sudut)&#xa;------------------------------&#xa;theta = radians(sudut)&#xa;jarak = sqrt((a*cos(theta))^2 + (b*sin(theta))^2)" vertex="1">
+          <mxGeometry x="630" y="639" width="390" height="104" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="juring3d" name="JuringElips3D">
+    <mxGraphModel dx="1700" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="juring3d-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Flowchart Class JuringElips3D" vertex="1">
+          <mxGeometry x="40" y="25" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666" value="Extends BolaElips dan Runnable. Menghitung volume serta luas permukaan prisma berjuring elips." vertex="1">
+          <mxGeometry x="40" y="75" width="540" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Start" vertex="1">
+          <mxGeometry x="80" y="170" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-ctor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Constructor JuringElips3D(a,b,tinggiJuring,sudut,isManual)&#xa;Panggil super(a,b,tinggiJuring,isManual)" vertex="1">
+          <mxGeometry x="40" y="250" width="280" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-valid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Input valid?&#xa;a &gt; 0 dan b &gt; 0&#xa;a &gt;= b&#xa;tinggiJuring &gt; 0&#xa;0 &lt; sudut &lt;= 360" vertex="1">
+          <mxGeometry x="85" y="365" width="190" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8" value="Throw IllegalArgumentException&#xa;proses dihentikan" vertex="1">
+          <mxGeometry x="340" y="385" width="245" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-state" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Simpan tinggiJuring dan sudutDerajat" vertex="1">
+          <mxGeometry x="40" y="525" width="280" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-super" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="super.run()&#xa;mengisi luas dasar dari Elips/BolaElips" vertex="1">
+          <mxGeometry x="40" y="645" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-run" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="run() class ini dipanggil" vertex="1">
+          <mxGeometry x="40" y="750" width="280" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-manual" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="isManual?" vertex="1">
+          <mxGeometry x="90" y="850" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-call-manual" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasPermukaanJuringElips3D(a,b,tinggi,sudut)&#xa;hitungVolumeJuringElips3D(a,b,tinggi,sudut)" vertex="1">
+          <mxGeometry x="350" y="830" width="270" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-call-auto" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasPermukaanJuringElips3D()&#xa;hitungVolumeJuringElips3D()" vertex="1">
+          <mxGeometry x="40" y="1000" width="280" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="End" vertex="1">
+          <mxGeometry x="420" y="1010" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-e1" edge="1" parent="1" source="juring3d-start" target="juring3d-ctor" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-e2" edge="1" parent="1" source="juring3d-ctor" target="juring3d-valid" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-e3" edge="1" parent="1" source="juring3d-valid" target="juring3d-error" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-e4" edge="1" parent="1" source="juring3d-valid" target="juring3d-state" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-e5" edge="1" parent="1" source="juring3d-state" target="juring3d-super" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-e6" edge="1" parent="1" source="juring3d-super" target="juring3d-run" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-e7" edge="1" parent="1" source="juring3d-run" target="juring3d-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-e8" edge="1" parent="1" source="juring3d-manual" target="juring3d-call-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-e9" edge="1" parent="1" source="juring3d-manual" target="juring3d-call-auto" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-e10" edge="1" parent="1" source="juring3d-call-manual" target="juring3d-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-e11" edge="1" parent="1" source="juring3d-call-auto" target="juring3d-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-method-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1" value="Metode, formula, dan sub-alur penting" vertex="1">
+          <mxGeometry x="630" y="120" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-method-0" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungVolumeJuringElips3D()&#xa;------------------------------&#xa;luasAlasJuring = (sudut/360) * super.luas&#xa;volume = luasAlasJuring * tinggiJuring" vertex="1">
+          <mxGeometry x="630" y="165" width="390" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-method-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungVolumeJuringElips3D(a,b,h,sudut)&#xa;------------------------------&#xa;validasi a,b,h,sudut&#xa;luasElips = super.hitungLuas(a,b)&#xa;luasAlasJuring = (sudut/360) * luasElips&#xa;volume = luasAlasJuring * h" vertex="1">
+          <mxGeometry x="1070" y="165" width="390" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-method-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasPermukaanJuringElips3D()&#xa;------------------------------&#xa;panjangBusur = hitungPanjangBusurElips(...)&#xa;jika sudut == 360 maka sisi=0&#xa;kelilingAlas = panjangBusur + sisiAwal + sisiAkhir&#xa;luasPermukaan = 2*luasAlasJuring + kelilingAlas*tinggi" vertex="1">
+          <mxGeometry x="630" y="291" width="390" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-method-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=8" value="hitungPanjangBusurElips(a,b,sudut)&#xa;------------------------------&#xa;theta = radians(sudut)&#xa;jumlahSegmen = 1000&#xa;h = theta/jumlahSegmen&#xa;total = f(0)+f(theta)&#xa;loop Simpson bobot 4/2&#xa;panjangBusur = total*h/3" vertex="1">
+          <mxGeometry x="1070" y="327" width="390" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-method-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=8" value="integrandBusur(a,b,t)&#xa;------------------------------&#xa;validasi field tinggiJuring dan sudutDerajat&#xa;sqrt((-a*sin(t))^2 + (b*cos(t))^2)" vertex="1">
+          <mxGeometry x="630" y="453" width="390" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="juring3d-method-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=8" value="hitungJarakPusatKeTitikElips(a,b,sudut)&#xa;------------------------------&#xa;theta = radians(sudut)&#xa;jarak = sqrt((a*cos(theta))^2 + (b*sin(theta))^2)" vertex="1">
+          <mxGeometry x="1070" y="525" width="390" height="104" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tembereng2d" name="TemberengElips">
+    <mxGraphModel dx="1700" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tembereng2d-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Flowchart Class TemberengElips" vertex="1">
+          <mxGeometry x="40" y="25" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666" value="Extends Elips dan Runnable. Menghitung luas serta keliling tembereng elips 2D." vertex="1">
+          <mxGeometry x="40" y="75" width="540" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Start" vertex="1">
+          <mxGeometry x="80" y="170" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-ctor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Constructor TemberengElips(a,b,sudut,isManual)&#xa;Panggil super(...)" vertex="1">
+          <mxGeometry x="40" y="250" width="280" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-valid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Input valid?&#xa;0 &lt; sudut &lt; 360&#xa;a &gt; 0 dan b &gt; 0&#xa;a &gt;= b" vertex="1">
+          <mxGeometry x="85" y="365" width="190" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8" value="Throw IllegalArgumentException&#xa;proses dihentikan" vertex="1">
+          <mxGeometry x="340" y="385" width="245" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-state" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Simpan sudutDerajat" vertex="1">
+          <mxGeometry x="40" y="525" width="280" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-run" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="run() class ini dipanggil" vertex="1">
+          <mxGeometry x="40" y="650" width="280" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-manual" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="isManual?" vertex="1">
+          <mxGeometry x="90" y="750" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-call-manual" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasTembereng(a,b,sudut)&#xa;hitungKelilingTembereng(a,b,sudut)" vertex="1">
+          <mxGeometry x="350" y="730" width="270" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-call-auto" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuas()&#xa;hitungKeliling()&#xa;(overridden ke method tembereng)" vertex="1">
+          <mxGeometry x="40" y="900" width="280" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="End" vertex="1">
+          <mxGeometry x="420" y="910" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-e1" edge="1" parent="1" source="tembereng2d-start" target="tembereng2d-ctor" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-e2" edge="1" parent="1" source="tembereng2d-ctor" target="tembereng2d-valid" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-e3" edge="1" parent="1" source="tembereng2d-valid" target="tembereng2d-error" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-e4" edge="1" parent="1" source="tembereng2d-valid" target="tembereng2d-state" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-e5" edge="1" parent="1" source="tembereng2d-state" target="tembereng2d-run" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-e6" edge="1" parent="1" source="tembereng2d-run" target="tembereng2d-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-e7" edge="1" parent="1" source="tembereng2d-manual" target="tembereng2d-call-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-e8" edge="1" parent="1" source="tembereng2d-manual" target="tembereng2d-call-auto" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-e9" edge="1" parent="1" source="tembereng2d-call-manual" target="tembereng2d-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-e10" edge="1" parent="1" source="tembereng2d-call-auto" target="tembereng2d-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-method-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1" value="Metode, formula, dan sub-alur penting" vertex="1">
+          <mxGeometry x="630" y="120" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-method-0" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuas()&#xa;------------------------------&#xa;return hitungLuasTembereng()" vertex="1">
+          <mxGeometry x="630" y="165" width="390" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-method-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasTembereng()&#xa;------------------------------&#xa;theta = radians(sudutDerajat)&#xa;luas = 0.5*a*b*(theta - sin(theta))" vertex="1">
+          <mxGeometry x="1070" y="165" width="390" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-method-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungKelilingTembereng()&#xa;------------------------------&#xa;panjangBusur = hitungPanjangBusurElips(...)&#xa;taliBusur = hitungTaliBusurElips(...)&#xa;keliling = panjangBusur + taliBusur" vertex="1">
+          <mxGeometry x="630" y="279" width="390" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-method-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=8" value="hitungPanjangBusurElips(a,b,sudut)&#xa;------------------------------&#xa;theta = radians(sudut)&#xa;jumlahSegmen = 1000&#xa;h = theta/jumlahSegmen&#xa;total = f(0)+f(theta)&#xa;loop Simpson bobot 4/2&#xa;panjangBusur = total*h/3" vertex="1">
+          <mxGeometry x="1070" y="291" width="390" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-method-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=8" value="integrandBusur(a,b,t)&#xa;------------------------------&#xa;sqrt((-a*sin(t))^2 + (b*cos(t))^2)" vertex="1">
+          <mxGeometry x="630" y="423" width="390" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng2d-method-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=8" value="hitungTaliBusurElips(a,b,sudut)&#xa;------------------------------&#xa;theta = radians(sudut)&#xa;taliBusur = sqrt((a*cos(theta)-a)^2 + (b*sin(theta))^2)" vertex="1">
+          <mxGeometry x="1070" y="489" width="390" height="104" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="tembereng3d" name="TemberengElips3D">
+    <mxGraphModel dx="1700" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tembereng3d-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Flowchart Class TemberengElips3D" vertex="1">
+          <mxGeometry x="40" y="25" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666" value="Extends BolaElips dan Runnable. Menghitung volume serta luas permukaan tembereng elips 3D." vertex="1">
+          <mxGeometry x="40" y="75" width="540" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Start" vertex="1">
+          <mxGeometry x="80" y="170" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-ctor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Constructor TemberengElips3D(a,b,tinggiTembereng,sudut,isManual)&#xa;Panggil super(a,b,tinggiTembereng,isManual)" vertex="1">
+          <mxGeometry x="40" y="250" width="280" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-valid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Input valid?&#xa;tinggiTembereng &gt; 0&#xa;0 &lt; sudut &lt; 360&#xa;a &gt; 0 dan b &gt; 0&#xa;a &gt;= b" vertex="1">
+          <mxGeometry x="85" y="365" width="190" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8" value="Throw IllegalArgumentException&#xa;proses dihentikan" vertex="1">
+          <mxGeometry x="340" y="385" width="245" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-state" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Simpan tinggiTembereng dan sudutDerajat" vertex="1">
+          <mxGeometry x="40" y="525" width="280" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-super" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="super.run()&#xa;mengisi luas dasar dari Elips/BolaElips" vertex="1">
+          <mxGeometry x="40" y="645" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-run" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="run() class ini dipanggil" vertex="1">
+          <mxGeometry x="40" y="750" width="280" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-manual" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="isManual?" vertex="1">
+          <mxGeometry x="90" y="850" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-call-manual" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasPermukaanTemberengElips3D(a,b,tinggi,sudut)&#xa;hitungVolumeTemberengElips3D(a,b,tinggi,sudut)" vertex="1">
+          <mxGeometry x="350" y="830" width="270" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-call-auto" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasPermukaanTemberengElips3D()&#xa;hitungVolumeTemberengElips3D()" vertex="1">
+          <mxGeometry x="40" y="1000" width="280" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="End" vertex="1">
+          <mxGeometry x="420" y="1010" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-e1" edge="1" parent="1" source="tembereng3d-start" target="tembereng3d-ctor" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-e2" edge="1" parent="1" source="tembereng3d-ctor" target="tembereng3d-valid" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-e3" edge="1" parent="1" source="tembereng3d-valid" target="tembereng3d-error" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-e4" edge="1" parent="1" source="tembereng3d-valid" target="tembereng3d-state" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-e5" edge="1" parent="1" source="tembereng3d-state" target="tembereng3d-super" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-e6" edge="1" parent="1" source="tembereng3d-super" target="tembereng3d-run" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-e7" edge="1" parent="1" source="tembereng3d-run" target="tembereng3d-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-e8" edge="1" parent="1" source="tembereng3d-manual" target="tembereng3d-call-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-e9" edge="1" parent="1" source="tembereng3d-manual" target="tembereng3d-call-auto" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-e10" edge="1" parent="1" source="tembereng3d-call-manual" target="tembereng3d-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-e11" edge="1" parent="1" source="tembereng3d-call-auto" target="tembereng3d-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-method-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1" value="Metode, formula, dan sub-alur penting" vertex="1">
+          <mxGeometry x="630" y="120" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-method-0" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungVolumeTemberengElips3D()&#xa;------------------------------&#xa;theta = radians(sudut)&#xa;luasAlas = 0.5*a*b*(theta - sin(theta))&#xa;volume = luasAlas * tinggiTembereng" vertex="1">
+          <mxGeometry x="630" y="165" width="390" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-method-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungVolumeTemberengElips3D(a,b,h,sudut)&#xa;------------------------------&#xa;validasi a,b,h,sudut&#xa;hitung luas alas tembereng&#xa;volume = luasAlas * h" vertex="1">
+          <mxGeometry x="1070" y="165" width="390" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-method-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasPermukaanTemberengElips3D()&#xa;------------------------------&#xa;panjangBusur = hitungPanjangBusurElips(...)&#xa;taliBusur = hitungTaliBusurElips(...)&#xa;kelilingAlas = panjangBusur + taliBusur&#xa;luasPermukaan = 2*luasAlas + kelilingAlas*tinggi" vertex="1">
+          <mxGeometry x="630" y="309" width="390" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-method-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=8" value="hitungPanjangBusurElips(a,b,sudut)&#xa;------------------------------&#xa;theta = radians(sudut)&#xa;jumlahSegmen = 1000&#xa;h = theta/jumlahSegmen&#xa;loop Simpson bobot 4/2&#xa;panjangBusur = total*h/3" vertex="1">
+          <mxGeometry x="1070" y="309" width="390" height="158" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-method-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=8" value="integrandBusur(a,b,t)&#xa;------------------------------&#xa;sqrt((a*sin(t))^2 + (b*cos(t))^2)" vertex="1">
+          <mxGeometry x="630" y="471" width="390" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="tembereng3d-method-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;arcSize=8" value="hitungTaliBusurElips(a,b,sudut)&#xa;------------------------------&#xa;theta = radians(sudut)&#xa;taliBusur = sqrt((a*cos(theta)-a)^2 + (b*sin(theta))^2)" vertex="1">
+          <mxGeometry x="1070" y="489" width="390" height="104" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="limas" name="LimasElips">
+    <mxGraphModel dx="1700" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="limas-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Flowchart Class LimasElips" vertex="1">
+          <mxGeometry x="40" y="25" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666" value="Extends Elips dan Runnable. Menghitung volume dan luas permukaan limas/kerucut alas elips." vertex="1">
+          <mxGeometry x="40" y="75" width="540" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Start" vertex="1">
+          <mxGeometry x="80" y="170" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-ctor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Constructor LimasElips(a,b,tinggiLimas,isManual)&#xa;Panggil super(...)" vertex="1">
+          <mxGeometry x="40" y="250" width="280" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-valid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Input valid?&#xa;a &gt; 0 dan b &gt; 0&#xa;a &gt;= b&#xa;tinggiLimas &gt; 0" vertex="1">
+          <mxGeometry x="85" y="365" width="190" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8" value="Throw IllegalArgumentException&#xa;proses dihentikan" vertex="1">
+          <mxGeometry x="340" y="385" width="245" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-state" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Simpan tinggiLimas" vertex="1">
+          <mxGeometry x="40" y="525" width="280" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-super" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="super.run()&#xa;isi luas dan keliling alas Elips" vertex="1">
+          <mxGeometry x="40" y="645" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-run" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="run() class ini dipanggil" vertex="1">
+          <mxGeometry x="40" y="750" width="280" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-manual" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="isManual?" vertex="1">
+          <mxGeometry x="90" y="850" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-call-manual" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasPermukaanLimasElips(a,b,tinggi)&#xa;hitungVolumeLimasElips(a,b,tinggi)" vertex="1">
+          <mxGeometry x="350" y="830" width="270" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-call-auto" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasPermukaanLimasElips()&#xa;hitungVolumeLimasElips()" vertex="1">
+          <mxGeometry x="40" y="1000" width="280" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="End" vertex="1">
+          <mxGeometry x="420" y="1010" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-e1" edge="1" parent="1" source="limas-start" target="limas-ctor" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-e2" edge="1" parent="1" source="limas-ctor" target="limas-valid" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-e3" edge="1" parent="1" source="limas-valid" target="limas-error" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-e4" edge="1" parent="1" source="limas-valid" target="limas-state" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-e5" edge="1" parent="1" source="limas-state" target="limas-super" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-e6" edge="1" parent="1" source="limas-super" target="limas-run" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-e7" edge="1" parent="1" source="limas-run" target="limas-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-e8" edge="1" parent="1" source="limas-manual" target="limas-call-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-e9" edge="1" parent="1" source="limas-manual" target="limas-call-auto" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-e10" edge="1" parent="1" source="limas-call-manual" target="limas-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-e11" edge="1" parent="1" source="limas-call-auto" target="limas-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-method-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1" value="Metode, formula, dan sub-alur penting" vertex="1">
+          <mxGeometry x="630" y="120" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-method-0" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungVolumeLimasElips()&#xa;------------------------------&#xa;volume = (1/3) * super.luas * tinggiLimas" vertex="1">
+          <mxGeometry x="630" y="165" width="390" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-method-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungVolumeLimasElips(a,b,h)&#xa;------------------------------&#xa;validasi a,b,h&#xa;luasAlas = super.hitungLuas(a,b)&#xa;volume = (1/3) * luasAlas * h" vertex="1">
+          <mxGeometry x="1070" y="165" width="390" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-method-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasPermukaanLimasElips()&#xa;------------------------------&#xa;garisPelukisA = sqrt(a^2 + h^2)&#xa;garisPelukisB = sqrt(b^2 + h^2)&#xa;rataGarisPelukis = rata-rata keduanya&#xa;luasSelimut = 0.5 * super.keliling * rataGarisPelukis&#xa;luasPermukaan = super.luas + luasSelimut" vertex="1">
+          <mxGeometry x="630" y="279" width="390" height="158" as="geometry" />
+        </mxCell>
+        <mxCell id="limas-method-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasPermukaanLimasElips(a,b,h)&#xa;------------------------------&#xa;validasi a,b,h&#xa;luasAlas = super.hitungLuas(a,b)&#xa;kelilingAlas = super.hitungKeliling(a,b)&#xa;hitung selimut&#xa;return luasPermukaan" vertex="1">
+          <mxGeometry x="1070" y="309" width="390" height="158" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="terpancung" name="LimasElipsTerpancung">
+    <mxGraphModel dx="1700" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="terpancung-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Flowchart Class LimasElipsTerpancung" vertex="1">
+          <mxGeometry x="40" y="25" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666" value="Extends LimasElips dan Runnable. Menghitung frustum/limas elips terpancung berdasarkan faktor skala atas." vertex="1">
+          <mxGeometry x="40" y="75" width="540" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Start" vertex="1">
+          <mxGeometry x="80" y="170" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-ctor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Constructor LimasElipsTerpancung(a,b,tinggiLimas,faktorAtas,isManual)&#xa;Panggil super(...)" vertex="1">
+          <mxGeometry x="40" y="250" width="280" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-valid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Input valid?&#xa;0 &lt; faktorAtas &lt; 1&#xa;tinggiLimas &gt; 0&#xa;a &gt; 0 dan b &gt; 0&#xa;a &gt;= b" vertex="1">
+          <mxGeometry x="85" y="365" width="190" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8" value="Throw IllegalArgumentException&#xa;proses dihentikan" vertex="1">
+          <mxGeometry x="340" y="385" width="245" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-state" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Simpan faktorAtas" vertex="1">
+          <mxGeometry x="40" y="525" width="280" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-super" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="super.run()&#xa;jalankan alur LimasElips dan Elips" vertex="1">
+          <mxGeometry x="40" y="645" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-run" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="run() class ini dipanggil" vertex="1">
+          <mxGeometry x="40" y="750" width="280" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-manual" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="isManual?" vertex="1">
+          <mxGeometry x="90" y="850" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-call-manual" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasPermukaanTerpancung(a,b,tinggi,faktor)&#xa;hitungVolumeTerpancung(a,b,tinggi,faktor)" vertex="1">
+          <mxGeometry x="350" y="830" width="270" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-call-auto" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasPermukaanTerpancung()&#xa;hitungVolumeTerpancung()" vertex="1">
+          <mxGeometry x="40" y="1000" width="280" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="End" vertex="1">
+          <mxGeometry x="420" y="1010" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-e1" edge="1" parent="1" source="terpancung-start" target="terpancung-ctor" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-e2" edge="1" parent="1" source="terpancung-ctor" target="terpancung-valid" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-e3" edge="1" parent="1" source="terpancung-valid" target="terpancung-error" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-e4" edge="1" parent="1" source="terpancung-valid" target="terpancung-state" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-e5" edge="1" parent="1" source="terpancung-state" target="terpancung-super" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-e6" edge="1" parent="1" source="terpancung-super" target="terpancung-run" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-e7" edge="1" parent="1" source="terpancung-run" target="terpancung-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-e8" edge="1" parent="1" source="terpancung-manual" target="terpancung-call-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-e9" edge="1" parent="1" source="terpancung-manual" target="terpancung-call-auto" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-e10" edge="1" parent="1" source="terpancung-call-manual" target="terpancung-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-e11" edge="1" parent="1" source="terpancung-call-auto" target="terpancung-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-method-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1" value="Metode, formula, dan sub-alur penting" vertex="1">
+          <mxGeometry x="630" y="120" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-method-0" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungVolumeTerpancung()&#xa;------------------------------&#xa;luasAtas = super.luas * faktorAtas^2&#xa;volume = (tinggi/3)*(super.luas + luasAtas + sqrt(super.luas*luasAtas))" vertex="1">
+          <mxGeometry x="630" y="165" width="390" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-method-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungVolumeTerpancung(a,b,h,f)&#xa;------------------------------&#xa;validasi a,b,h,f&#xa;luasAlas = super.hitungLuas(a,b)&#xa;luasAtas = luasAlas * f^2&#xa;volume = (h/3)*(luasAlas + luasAtas + sqrt(luasAlas*luasAtas))" vertex="1">
+          <mxGeometry x="1070" y="165" width="390" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-method-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasPermukaanTerpancung()&#xa;------------------------------&#xa;luasAtas = super.luas * faktorAtas^2&#xa;kelilingAtas = super.keliling * faktorAtas&#xa;selisihA = a - a*faktorAtas&#xa;selisihB = b - b*faktorAtas&#xa;rataGarisPelukis = avg(sqrt(selisihA^2+h^2), sqrt(selisihB^2+h^2))&#xa;luasSelimut = 0.5*(super.keliling+kelilingAtas)*rataGarisPelukis&#xa;luasPermukaan = super.luas + luasAtas + luasSelimut" vertex="1">
+          <mxGeometry x="630" y="291" width="390" height="194" as="geometry" />
+        </mxCell>
+        <mxCell id="terpancung-method-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasPermukaanTerpancung(a,b,h,f)&#xa;------------------------------&#xa;validasi a,b,h,f&#xa;hitung luas/keliling alas dan atas&#xa;hitung garis pelukis dari selisih sumbu&#xa;return luasPermukaanTerpancung" vertex="1">
+          <mxGeometry x="1070" y="327" width="390" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="prisma" name="PrismaElips">
+    <mxGraphModel dx="1700" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="prisma-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Flowchart Class PrismaElips" vertex="1">
+          <mxGeometry x="40" y="25" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666" value="Extends Elips dan Runnable. Menghitung volume dan luas permukaan prisma/tabung alas elips." vertex="1">
+          <mxGeometry x="40" y="75" width="540" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Start" vertex="1">
+          <mxGeometry x="80" y="170" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-ctor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Constructor PrismaElips(a,b,tinggiPrisma,isManual)&#xa;Panggil super(a,b,isManual)" vertex="1">
+          <mxGeometry x="40" y="250" width="280" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-valid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Input valid?&#xa;tinggiPrisma &gt; 0&#xa;a &gt; 0 dan b &gt; 0&#xa;a &gt;= b" vertex="1">
+          <mxGeometry x="85" y="365" width="190" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8" value="Throw IllegalArgumentException&#xa;proses dihentikan" vertex="1">
+          <mxGeometry x="340" y="385" width="245" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-state" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Simpan tinggiPrisma" vertex="1">
+          <mxGeometry x="40" y="525" width="280" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-super" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="super.run()&#xa;jalankan perhitungan Elips terlebih dahulu" vertex="1">
+          <mxGeometry x="40" y="645" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-run" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="run() class ini dipanggil" vertex="1">
+          <mxGeometry x="40" y="750" width="280" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-manual" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="isManual?" vertex="1">
+          <mxGeometry x="90" y="850" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-call-manual" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasPermukaanPrismaElips(a,b,tinggi)&#xa;hitungVolumePrismaElips(a,b,tinggi)" vertex="1">
+          <mxGeometry x="350" y="830" width="270" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-call-auto" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="hitungLuasPermukaanPrismaElips()&#xa;hitungVolumePrismaElips()" vertex="1">
+          <mxGeometry x="40" y="1000" width="280" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="End" vertex="1">
+          <mxGeometry x="420" y="1010" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-e1" edge="1" parent="1" source="prisma-start" target="prisma-ctor" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-e2" edge="1" parent="1" source="prisma-ctor" target="prisma-valid" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-e3" edge="1" parent="1" source="prisma-valid" target="prisma-error" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-e4" edge="1" parent="1" source="prisma-valid" target="prisma-state" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-e5" edge="1" parent="1" source="prisma-state" target="prisma-super" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-e6" edge="1" parent="1" source="prisma-super" target="prisma-run" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-e7" edge="1" parent="1" source="prisma-run" target="prisma-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-e8" edge="1" parent="1" source="prisma-manual" target="prisma-call-manual" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-e9" edge="1" parent="1" source="prisma-manual" target="prisma-call-auto" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-e10" edge="1" parent="1" source="prisma-call-manual" target="prisma-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-e11" edge="1" parent="1" source="prisma-call-auto" target="prisma-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-method-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1" value="Metode, formula, dan sub-alur penting" vertex="1">
+          <mxGeometry x="630" y="120" width="900" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-method-0" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungVolumePrismaElips()&#xa;------------------------------&#xa;volume = super.luas * tinggiPrisma" vertex="1">
+          <mxGeometry x="630" y="165" width="390" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-method-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungVolumePrismaElips(a,b,h)&#xa;------------------------------&#xa;validasi a,b,h&#xa;luasAlas = super.hitungLuas(a,b)&#xa;volume = luasAlas * h" vertex="1">
+          <mxGeometry x="1070" y="165" width="390" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-method-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasPermukaanPrismaElips()&#xa;------------------------------&#xa;luasPermukaan = 2*super.luas + super.keliling*tinggiPrisma" vertex="1">
+          <mxGeometry x="630" y="279" width="390" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="prisma-method-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5e1;strokeColor=#82b366;arcSize=8" value="hitungLuasPermukaanPrismaElips(a,b,h)&#xa;------------------------------&#xa;validasi a,b,h&#xa;luasAlas = super.hitungLuas(a,b)&#xa;kelilingAlas = super.hitungKeliling(a,b)&#xa;luasPermukaan = 2*luasAlas + kelilingAlas*h" vertex="1">
+          <mxGeometry x="1070" y="309" width="390" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="GeometriGUI" name="GeometriGUI">
+    <mxGraphModel dx="1700" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gui-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Flowchart Class GeometriGUI" vertex="1">
+          <mxGeometry x="40" y="25" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666" value="JFrame utama aplikasi. Mengatur input, tabel hasil, progress bar, validasi, master thread, dan 11 worker thread per jenis bangun." vertex="1">
+          <mxGeometry x="40" y="75" width="760" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-main" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="main()" vertex="1">
+          <mxGeometry x="80" y="180" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-invoke" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="SwingUtilities.invokeLater(new GeometriGUI().setVisible(true))" vertex="1">
+          <mxGeometry x="40" y="270" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-ctor" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Constructor GeometriGUI()&#xa;inisialisasi JButton, JComboBox, JTextField, JTable, DefaultTableModel, JProgressBar, layout, tabs" vertex="1">
+          <mxGeometry x="40" y="380" width="360" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-listener" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="btnGenerate.addActionListener(...)&#xa;ketika diklik: jalankanMasterThread()" vertex="1">
+          <mxGeometry x="40" y="540" width="360" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-button" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Klik Generate Data" vertex="1">
+          <mxGeometry x="480" y="180" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-master" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="jalankanMasterThread()&#xa;disable tombol dan resetTabel()" vertex="1">
+          <mxGeometry x="440" y="280" width="330" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-validate" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Validasi input berhasil?&#xa;validasiJumlahData()&#xa;jika manual: validasiInputManual()" vertex="1">
+          <mxGeometry x="475" y="400" width="260" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-invalid" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8" value="Tampilkan JOptionPane error&#xa;aktifkan tombol&#xa;return" vertex="1">
+          <mxGeometry x="820" y="420" width="270" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-mode" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Mode manual?" vertex="1">
+          <mxGeometry x="515" y="590" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-manualdata" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Isi array data dari input manual untuk semua baris" vertex="1">
+          <mxGeometry x="780" y="585" width="300" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-randomdata" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Generate data random&#xa;pastikan a &gt;= b&#xa;skala data dalam, radius, faktorAtas valid" vertex="1">
+          <mxGeometry x="420" y="735" width="350" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-arrays" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Buat array hasil 11 tabel dan array errors[11]" vertex="1">
+          <mxGeometry x="440" y="900" width="330" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-threads" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Buat 11 thread dengan buatThread()&#xa;Elips, Juring2D, Cincin2D, Tembereng2D, Bola, Limas, Terpancung, Prisma, Juring3D, Cincin3D, Tembereng3D" vertex="1">
+          <mxGeometry x="420" y="1030" width="380" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-startthreads" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="start semua thread" vertex="1">
+          <mxGeometry x="870" y="1030" width="240" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-join" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="join semua thread&#xa;jika interrupted: tampilkan pesan dan return" vertex="1">
+          <mxGeometry x="870" y="1140" width="280" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-update" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="SwingUtilities.invokeLater()&#xa;tambahBaris ke semua model tabel&#xa;cek errors&#xa;tampilkan dialog sukses/error&#xa;aktifkan tombol" vertex="1">
+          <mxGeometry x="870" y="1280" width="330" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="End" vertex="1">
+          <mxGeometry x="990" y="1470" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-worker-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1" value="Sub-alur buatThread() dan polymorphism" vertex="1">
+          <mxGeometry x="1180" y="180" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-worker-start" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Thread worker start" vertex="1">
+          <mxGeometry x="1250" y="235" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-loop" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" value="Loop i &lt; jumlahData?" vertex="1">
+          <mxGeometry x="1230" y="335" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-read" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Ambil a, b, tinggi, sudut, data dalam, radius, faktor dari array" vertex="1">
+          <mxGeometry x="1160" y="490" width="330" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-checknum" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="cekValidAngka()&#xa;tolak NaN/Infinity" vertex="1">
+          <mxGeometry x="1160" y="620" width="330" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-callback" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="HitungBaris.hitung(...)&#xa;instansiasi class bangun&#xa;jalankanPolymorphism(object)" vertex="1">
+          <mxGeometry x="1160" y="735" width="330" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-poly" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="jalankanPolymorphism(Elips bentuk)&#xa;bentuk.run()&#xa;method run mengikuti object asli" vertex="1">
+          <mxGeometry x="1160" y="875" width="330" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-save" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;arcSize=8" value="Simpan Object[] hasil[i]&#xa;update progress tiap 50 data atau data terakhir&#xa;opsional sleep acak singkat" vertex="1">
+          <mxGeometry x="1160" y="1010" width="330" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-error" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;arcSize=8" value="Jika exception:&#xa;errors[indexError] = ThreadComputationException(...)" vertex="1">
+          <mxGeometry x="1160" y="1160" width="330" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-worker-end" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Thread selesai" vertex="1">
+          <mxGeometry x="1260" y="1300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-nested" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#f5f5f5;strokeColor=#666666" value="Nested type dalam GeometriGUI:&#xa;InvalidInputException: error validasi input.&#xa;ThreadComputationException: bungkus error worker thread.&#xa;HitungBaris: callback per baris untuk tiap jenis bangun.&#xa;Helper UI: progressBar(), scroll(), addProgress(), resetTabel(), setMaksimumProgress(), tambahBaris(), f()." vertex="1">
+          <mxGeometry x="40" y="1260" width="760" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e1" edge="1" parent="1" source="gui-main" target="gui-invoke" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e2" edge="1" parent="1" source="gui-invoke" target="gui-ctor" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e3" edge="1" parent="1" source="gui-ctor" target="gui-listener" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e4" edge="1" parent="1" source="gui-button" target="gui-master" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e5" edge="1" parent="1" source="gui-master" target="gui-validate" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e6" edge="1" parent="1" source="gui-validate" target="gui-invalid" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e7" edge="1" parent="1" source="gui-validate" target="gui-mode" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e8" edge="1" parent="1" source="gui-mode" target="gui-manualdata" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e9" edge="1" parent="1" source="gui-mode" target="gui-randomdata" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e10" edge="1" parent="1" source="gui-manualdata" target="gui-arrays" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e11" edge="1" parent="1" source="gui-randomdata" target="gui-arrays" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e12" edge="1" parent="1" source="gui-arrays" target="gui-threads" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e13" edge="1" parent="1" source="gui-threads" target="gui-startthreads" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e14" edge="1" parent="1" source="gui-startthreads" target="gui-join" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e15" edge="1" parent="1" source="gui-join" target="gui-update" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-e16" edge="1" parent="1" source="gui-update" target="gui-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-w1" edge="1" parent="1" source="gui-worker-start" target="gui-loop" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-w2" edge="1" parent="1" source="gui-loop" target="gui-read" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Ya">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-w3" edge="1" parent="1" source="gui-read" target="gui-checknum" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-w4" edge="1" parent="1" source="gui-checknum" target="gui-callback" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-w5" edge="1" parent="1" source="gui-callback" target="gui-poly" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-w6" edge="1" parent="1" source="gui-poly" target="gui-save" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-w7" edge="1" parent="1" source="gui-save" target="gui-loop" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-w8" edge="1" parent="1" source="gui-loop" target="gui-worker-end" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="Tidak">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gui-w9" edge="1" parent="1" source="gui-callback" target="gui-error" style="endArrow=block;html=1;rounded=0;strokeWidth=2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram></mxfile>

@@ -1,10 +1,16 @@
+// INHERITENCE : JuringElips (2D) turunan dari Elips (2D).
+// MULTHITREADING : "implements Runnable" agar bisa berjalan sebagai Thread mandiri untuk
 public class JuringElips extends Elips implements Runnable {
 
+    // ENCAPSULATION : Atribut state untuk membungkus hasil perhitungan luas dan keliling juring elips.
     public double sudutDerajat, luasJuring, kelilingJuring, luasElips, kelilingElips, panjangBusur, rataRataJariJari, panjangBusurElips;
     public double sisiAwal, sisiAkhir, theta, h, total, integrandBusur, jarakPusatKeTitikElips, jumlahSegmen;
 
+    // Constructor untuk menginisialisasi atribut state juring elips.
     public JuringElips(double semiMayorLuar, double semiMinorLuar, double sudutDerajat, boolean isManual) {
         super(semiMayorLuar, semiMinorLuar, isManual);
+
+        // Validasi : Memastikan nilai semi mayor dan semi minor lebih besar dari 0, serta semi mayor lebih besar atau sama dengan semi minor, dan sudut derajat lebih dari 0 dan maksimal 360.
         if (semiMayorLuar <= 0 || semiMinorLuar <= 0) {
             throw new IllegalArgumentException("Semi mayor luar dan semi minor luar juring elips harus lebih besar dari 0!");
         }
@@ -17,21 +23,28 @@ public class JuringElips extends Elips implements Runnable {
         this.sudutDerajat = sudutDerajat;
     }
 
+    // ----------------------------------------------------------------------------------------------------------------------------------------
+    // OVERRIDING : Implementasi method hitungLuas() dan hitungKel
+
     @Override
     public double hitungLuas() {
         return this.hitungLuasJuring();
     }
 
+    // OVERRIDING : Implementasi method hitungKeliling() dari interface BendaGeometri.
     @Override
     public double hitungKeliling() {
         return this.hitungKelilingJuring();
     }
 
+    // ----------------------------------------------------------------------------------------------------------------------------------------
+    // OVERRIDING : Implementasi method hitungLuas() dan hitungKeliling() dari interface BendaGeometri.
     public double hitungLuasJuring() {
         this.luasJuring = (this.sudutDerajat / 360.0) * super.luas;
         return this.luasJuring;
     }
 
+    // OVERLOADING : Implementasi method hitungLuas() dan hitungKeliling dengan parameter dari interface BendaGeometri.
     public double hitungLuasJuring(double semiMayorLuar, double semiMinorLuar, double sudutDerajat) {
         if (semiMayorLuar <= 0 || semiMinorLuar <= 0) {
             throw new IllegalArgumentException("Semi mayor luar dan semi minor luar juring elips harus lebih besar dari 0!");
@@ -47,6 +60,7 @@ public class JuringElips extends Elips implements Runnable {
         return this.luasJuring;
     }
 
+    // OVERRIDING : Implementasi method hitungKeliling() dari interface BendaGeometri.
     public double hitungKelilingJuring() {
         this.panjangBusur = hitungPanjangBusurElips(super.semiMayorLuar, super.semiMinorLuar, this.sudutDerajat);
         if (Math.abs(this.sudutDerajat - 360.0) < 0.0000001) {
@@ -61,6 +75,7 @@ public class JuringElips extends Elips implements Runnable {
         return this.kelilingJuring;
     }
 
+    // OVERLOADING : Implementasi method hitungKeliling() dengan parameter dari interface BendaGeometri.
     public double hitungKelilingJuring(double semiMayorLuar, double semiMinorLuar, double sudutDerajat) {
         if (semiMayorLuar <= 0 || semiMinorLuar <= 0) {
             throw new IllegalArgumentException("Semi mayor luar dan semi minor luar juring elips harus lebih besar dari 0!");
@@ -85,6 +100,7 @@ public class JuringElips extends Elips implements Runnable {
         return this.kelilingJuring;
     }
 
+    // OVERLOADING : method hitungPanjangBusurElips (dengan parameter).
     public double hitungPanjangBusurElips(double semiMayorLuar, double semiMinorLuar, double sudutDerajat) {
         if (semiMayorLuar <= 0 || semiMinorLuar <= 0) {
             throw new IllegalArgumentException("Semi mayor luar dan semi minor luar juring elips harus lebih besar dari 0!");
@@ -109,6 +125,7 @@ public class JuringElips extends Elips implements Runnable {
         return panjangBusurElips;
     }
 
+    // OVERLOADING : method integrandBusur (dengan parameter).
     public double integrandBusur(double semiMayorLuar, double semiMinorLuar, double t) {
         if (semiMayorLuar <= 0 || semiMinorLuar <= 0) {
             throw new IllegalArgumentException("Semi mayor luar dan semi minor luar juring elips harus lebih besar dari 0!");
@@ -122,6 +139,7 @@ public class JuringElips extends Elips implements Runnable {
         return integrandBusur;
     }
 
+    // OVERLOADING : method hitungJarakPusatKeTitikElips (dengan parameter).
     public double hitungJarakPusatKeTitikElips(double semiMayorLuar, double semiMinorLuar, double sudutDerajat) {
         if (semiMayorLuar <= 0 || semiMinorLuar <= 0) {
             throw new IllegalArgumentException("Semi mayor luar dan semi minor luar juring elips harus lebih besar dari 0!");
@@ -140,6 +158,8 @@ public class JuringElips extends Elips implements Runnable {
         return jarakPusatKeTitikElips;
     }
 
+    // ----------------------------------------------------------------------------------------------------------------------------------------
+    // OVERRIDING : method run() milik Runnable untuk menjalankan perhitungan luas dan keliling juring elips secara otomatis saat thread dijalankan.
     @Override
     public void run() {
         if (this.isManual) {
